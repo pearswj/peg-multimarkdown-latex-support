@@ -1,0 +1,50 @@
+%
+%	For setup that must follow metadata included in the document
+%
+
+\usepackage[
+	plainpages=false,
+	pdfpagelabels,
+	pdftitle={\mytitle},
+	pagebackref,
+	pdfauthor={\myauthor},
+	pdfkeywords={\keywords},
+	colorlinks,allcolors=blue
+	]{hyperref}
+%\usepackage{memhfixc} % doesn't work with article class
+
+
+%\input{mmd-title}
+
+
+\begin{document}
+
+%\title{\mytitle}
+%\author{\myauthor}
+
+%\mainmatter % doesn't work with article class
+%\maketitle
+
+
+% Copyright
+%\setlength{\parindent}{0pt}
+%
+%\ifx\mycopyright\undefined
+%\else
+%	\textcopyright{} \mycopyright
+%\fi
+%
+%\setlength{\parindent}{1em}
+
+
+\begin{flushright}
+\footnotesize{\subtitle\\
+Department of Civil and Structural Engineering, University of Sheffield}
+\end{flushright}
+\vspace{0.5cm}
+\noindent{\huge \textbf{\mytitle }}\\
+
+\noindent \textit{\myauthor}
+
+\vspace{1.2cm}
+

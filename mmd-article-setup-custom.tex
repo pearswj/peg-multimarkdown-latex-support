@@ -1,0 +1,66 @@
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+%\usepackage{doi}
+%\usepackage[bf,small]{caption2}
+\usepackage{natbib}
+%\bibpunct[; ]{(}{)}{,}{a}{}{;}
+%\usepackage[colorlinks,allcolors=black]{hyperref}
+\usepackage{array}
+\usepackage{fancyvrb}
+\usepackage{subfig}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\RequirePackage{fancybox}
+
+\setlength{\textwidth}{17.2cm}
+\setlength{\textheight}{25.2cm}
+\setlength{\topmargin}{-2cm}
+\setlength{\oddsidemargin}{-0.6cm}
+\setlength{\evensidemargin}{-0.4cm}
+\setlength{\headheight}{9pt}
+
+\hbadness=100000
+\hfuzz=50pt
+
+\RequirePackage[small]{titlesec}
+\titleformat{\section}
+{\large\bfseries}{\large\thesection}{1.5em}{}
+\titleformat{\subsection}
+{\normalsize\bfseries}{\normalsize\thesubsection}{1.5em}{\textit}
+\titleformat{\subsubsection}
+{\small\bfseries}{\small\thesubsubsection}{1.5em}{\textit}
+
+%\makeatletter
+%\newenvironment{tablehere}
+%  {\def\@captype{table}}
+%  {}
+%
+%\newenvironment{figurehere}
+%  {\def\@captype{figure}}
+%  {}
+%\makeatother
+
+\renewcommand\figurename{Fig.}
+%\renewcommand{\captionlabeldelim}{}
+
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+
+\immediate\write18{texcount -1 -sum=1,0,0,0,0,0,0 *.tex > word.count}
+\newcommand\wordcount{\subsubsection*{\normalfont\emph{Word count: \input{word.count}}}}
+
+%-------------------------------------------
+
+% Configure default metadata to avoid errors
+\input{mmd-default-metadata}
+
+%-------------------------------------------
